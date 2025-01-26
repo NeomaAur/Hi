@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise Envelope</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            background-image: url('https://i.pinimg.com/736x/6f/f4/10/6ff410bc7366253deccad88898d0aae7.jpg');
+        }
+
+        .envelope {
+            width: 400px;
+            height: 240px;
+            background-color: #fff;
+            position: relative;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .envelope:hover {
+            transform: scale(1.05);
+        }
+
+        .flap {
+            width: 100%;
+            height: 120px;
+            background-color: #e0aaff;
+            position: absolute;
+            top: 0;
+            clip-path: polygon(0 0, 50% 100%, 100% 0);
+            background-image: url('https://i.pinimg.com/736x/ff/d8/db/ffd8dbbfcc66aa42474c27cb52d4704e.jpg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .envelope-text {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5rem;
+            color: #333;
+            text-align: center;
+            font-family: "Playwrite IN", serif;
+        }
+
+        .message-container {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .message {
+            background-color: #fff;
+            padding: 60px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            font-size: 1.5rem;
+            position: relative;
+            width: 600px; /* Increased width */
+            height: 600px; /* Increased height */
+            animation: pop-up 0.5s ease;
+            font-family: "Playwrite IN", serif;
+            background-image: url('https://i.pinimg.com/736x/32/28/d6/3228d6d8b4add513a1d6b4764ffee860.jpg');
+            overflow-y: auto; /* Allow scrolling if text overflows */
+        }
+
+        @keyframes pop-up {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .gif-container {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .gif-container iframe {
+            max-width: 400px;
+            max-height: 240px;
+        }
+
+        .popup-message {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            font-size: 1.3rem;
+            animation: fade-in 0.5s ease;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="envelope" onclick="openEnvelope()">
+        <div class="flap"></div>
+        <div class="envelope-text">I love you</div>
+    </div>
+
+    <div class="message-container" id="messageContainer">
+        <div class="message">
+            <p>I love you, in the quiet folds of night,<br>
+               When shadows breathe and stars take flight.<br>
+               In the spaces between thoughts, untold,<br>
+               Where my heart beats its rhythm, bold.<br><br>
+
+               I love you, as the ocean loves the shore,<br>
+               Cresting high, then softly, pulling more.<br>
+               In each wave, a whispered call,<br>
+               In the depth, I find you, after all.<br><br>
+
+               I love you, in the language of the skies,<br>
+               In the storm's rage and the soft sunrise.<br>
+               Like thunder's roar and the rain's sweet kiss,<br>
+               You are the quiet, in the tempest's bliss.<br><br>
+
+               I love you, not in words, but in every sigh,<br>
+               In every glance, in the way we fly.<br>
+               In the space where time ceases to exist,<br>
+               Where you and I are an eternal twist.<br><br>
+
+               I love you, as the earth loves the tree,<br>
+               Roots entwined, forever we’ll be.<br>
+               In every breath, every heartbeat, every sound,<br>
+               In this love, our souls are truly found.</p>
+        </div>
+    </div>
+
+    <script>
+        function openEnvelope() {
+            const messageContainer = document.getElementById('messageContainer');
+            messageContainer.style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
