@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surprise Envelope</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap" rel="stylesheet">
@@ -151,6 +150,7 @@
             <h2>Select a Poem</h2>
             <button onclick="showPoem('poem1')">I Love You</button>
             <button onclick="showPoem('poem2')">Where the Universe Hides</button>
+            <button onclick="showPoem('poem3')">Where You Are, I Ache to Be</button>
         </div>
     </div>
 
@@ -160,8 +160,7 @@
 
     <script>
         const poems = {
-            poem1: `
-                <p>I love you, in the quiet folds of night,<br>
+            poem1: ` <p>I love you, in the quiet folds of night,<br>
                    When shadows breathe and stars take flight.<br>
                    In the spaces between thoughts, untold,<br>
                    Where my heart beats its rhythm, bold.<br><br>
@@ -184,9 +183,8 @@
                    I love you, as the earth loves the tree,<br>
                    Roots entwined, forever we’ll be.<br>
                    In every breath, every heartbeat, every sound,<br>
-                   In this love, our souls are truly found.</p>`,
-            poem2: `
-                <p>There are moments, <br>
+                   In this love, our souls are truly found.</p>,`,
+            poem2: `<p>There are moments, <br>
                    when I’m with you. <br>
                    and I can’t fathom how others before me, <br>
                     missed what I see so clearly.<br><br>
@@ -207,9 +205,43 @@
                   for it left you here, <br>
                   And I love, <br>
                   beyond words, <br>
-                  that you are mine.</p>`
-
+                  that you are mine.</p>`,
+            poem3: `<p>I breathe you in the way dusk swallows the sun,<br>
+                   aching, endless, never quite enough.<br>
+                   You are the echo in my ribs,<br>
+                   the whisper in the wind that calls me home,<br>
+                   yet home is a place my arms cannot reach,<br>
+                   a warmth I only hold in dreams.<br><br>
                    
+                   I miss you like the moon misses the tide,<br>
+                   pulling, yearning,<br>
+                   knowing that no matter how I stretch toward you,<br>
+                   the horizon will not break,<br>
+                   the stars will not bend,<br>
+                   and I am left with nothing but your name<br>
+                   pressed between my lips like a silent prayer.<br><br>
+                   
+                   Oh, mon amour if the sky would only listen,<br>
+                   it would unravel the distance between us,<br>
+                   let me weave myself into your world,<br>
+                   let me tangle my fingers in yours<br>
+                   until I forget what it means to be alone.<br><br>
+                   
+                   I would hold you so tightly<br>
+                   that even the spaces between us would disappear,<br>
+                   until my heartbeat no longer knows solitude,<br>
+                   only the steady rhythm of yours against mine,<br>
+                   only the certainty that you are here,<br>
+                   where you have always belonged.<br><br>
+                   
+                   Come to me, love.<br>
+                   Let the universe conspire,<br>
+                   let the winds shift,<br>
+                   let fate fold itself in half<br>
+                   so that wherever you stand,<br>
+                   I will no longer have to long<br>
+                   I will simply be with you.</p>
+`
         };
 
         function showPoemSelection() {
